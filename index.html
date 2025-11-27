@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asep Gu - Full Stack Developer & Creative Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Asep Gu
+            </div>
+            
+            <div class="nav-menu">
+                <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+                <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                <button onclick="scrollToSection('services')" class="nav-link">Services</button>
+                <button onclick="scrollToSection('portfolio')" class="nav-link">Portfolio</button>
+                <button onclick="scrollToSection('contact')" class="nav-link">Contact</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn">
+                <button id="mobile-menu-button">
+                    <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-content">
+            <button onclick="scrollToSection('home')" class="mobile-nav-link">Home</button>
+            <button onclick="scrollToSection('about')" class="mobile-nav-link">About</button>
+            <button onclick="scrollToSection('services')" class="mobile-nav-link">Services</button>
+            <button onclick="scrollToSection('portfolio')" class="mobile-nav-link">Portfolio</button>
+            <button onclick="scrollToSection('contact')" class="mobile-nav-link">Contact</button>
+            <button id="close-mobile-menu" class="close-menu-btn">
+                <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Particle Background -->
+        <div id="particles-container" class="particles-container"></div>
+        
+        <!-- Content -->
+        <div class="container">
+            <div class="hero-content">
+                <!-- Text Content -->
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I am</p>
+                    
+                    <h1 class="hero-title">
+                        <span id="typewriter" class="typewriter-text"></span>
+                        <span class="typewriter-cursor">|</span>
+                    </h1>
+                    
+                    <h2 class="hero-subtitle">
+                        Full Stack Developer & Creative Designer
+                    </h2>
+                    
+                    <p class="hero-description">
+                        I create exceptional digital experiences through innovative web development 
+                        and stunning design solutions. Passionate about crafting user-centric 
+                        applications that make a difference.
+                    </p>
+                    
+                    <!-- Buttons -->
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Download CV</button>
+                        <button onclick="scrollToSection('contact')" class="btn btn-secondary">Contact Me</button>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="social-links">
+                        <a href="https://wa.me/62895406178006" class="social-link">
+                            <span class="sr-only">WhatsApp</span>
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893c0-3.189-1.248-6.189-3.515-8.447"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://github.com/Hanckdad" class="social-link">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://whatsapp.com/channel/0029Vb75Zu9JZg46i8MIK62u" class="social-link">
+                            <span class="sr-only">WhatsApp Channel</span>
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893c0-3.189-1.248-6.189-3.515-8.447"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://t.me/altheric" class="social-link">
+                            <span class="sr-only">Telegram</span>
+                            <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.197l-1.84 8.576c-.129.59-.462.734-.935.456l-2.593-1.91-1.251 1.204c-.138.138-.255.255-.523.255l.187-2.843 4.942-4.473c.216-.187-.047-.29-.335-.103l-6.108 3.85-2.633-.822c-.574-.182-.587-.574.12-.85l10.316-3.977c.48-.17.897.129.748.85z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Profile Photo -->
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <div class="profile-glow"></div>
+                        <img 
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                            alt="Asep Gu"
+                            class="profile-image"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    About <span class="text-accent">Me</span>
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="about-content">
+                <p class="about-description">
+                    "I am a passionate Web Development student focusing on modern frontend technologies, 
+                    UI/UX fundamentals, and backend fundamentals. I enjoy building clean, responsive, 
+                    and user-friendly web applications."
+                </p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    My <span class="text-accent">Services</span>
+                </h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    I offer a wide range of services to help bring your digital ideas to life
+                </p>
+            </div>
+
+            <div id="services-container" class="services-grid">
+                <!-- Services will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    My <span class="text-accent">Portfolio</span>
+                </h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Check out some of my recent projects and creative works
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="portfolio-filters">
+                <button data-filter="all" class="filter-btn active">All</button>
+                <button data-filter="react" class="filter-btn">React</button>
+                <button data-filter="vue" class="filter-btn">Vue.js</button>
+                <button data-filter="node" class="filter-btn">Node.js</button>
+                <button data-filter="api" class="filter-btn">API</button>
+            </div>
+
+            <div id="portfolio-container" class="portfolio-grid">
+                <!-- Portfolio items will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Get In <span class="text-accent">Touch</span>
+                </h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Ready to bring your ideas to life? Let's discuss your project!
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3 class="contact-title">Let's talk about everything!</h3>
+                    <p class="contact-description">
+                        Whether you have a project in mind, need technical consultation, or just want to say hello, 
+                        I'd love to hear from you. Feel free to reach out through any of the channels below.
+                    </p>
+
+                    <div class="contact-methods">
+                        <a href="mailto:asepgu@email.com" class="contact-method">
+                            <div class="contact-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-method-title">Email</div>
+                                <div class="contact-method-value">asepgu@email.com</div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://wa.me/62895406178006" class="contact-method">
+                            <div class="contact-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-method-title">Phone</div>
+                                <div class="contact-method-value">+62 895 4061 78006</div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="contact-method">
+                            <div class="contact-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-method-title">Location</div>
+                                <div class="contact-method-value">Indonesia</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="contact-social">
+                        <h4 class="social-title">Follow Me</h4>
+                        <div class="social-buttons">
+                            <a href="https://github.com/Hanckdad" class="social-btn">
+                                <svg fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://t.me/altheric" class="social-btn">
+                                <svg fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.197l-1.84 8.576c-.129.59-.462.734-.935.456l-2.593-1.91-1.251 1.204c-.138.138-.255.255-.523.255l.187-2.843 4.942-4.473c.216-.187-.047-.29-.335-.103l-6.108 3.85-2.633-.822c-.574-.182-.587-.574.12-.85l10.316-3.977c.48-.17.897.129.748.85z"/>
+                                </svg>
+                            </a>
+                            <a href="https://whatsapp.com/channel/0029Vb75Zu9JZg46i8MIK62u" class="social-btn">
+                                <svg fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893c0-3.189-1.248-6.189-3.515-8.447"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" required class="form-input" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" name="email" required class="form-input" placeholder="Enter your email">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" required class="form-input" placeholder="Enter subject">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" required rows="6" class="form-textarea" placeholder="Enter your message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">Asep Gu</div>
+                    <p class="footer-description">Full Stack Developer & Creative Designer</p>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p class="copyright-text">
+                        © <span id="current-year"></span> Asep Gu. All rights reserved.
+                    </p>
+                    <p class="built-with">Built with HTML, CSS & JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
