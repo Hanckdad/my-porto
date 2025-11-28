@@ -3,22 +3,22 @@ const servicesData = [
     {
         title: "Web Development",
         description: "Building modern, responsive websites using latest technologies like React, Next.js, and TailwindCSS.",
-        image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+        image: "/image/web-dev.jpg"
     },
     {
         title: "Backend Development", 
         description: "Creating robust server-side applications with Node.js, Express, and database management.",
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+        image: "/image/backend.jpg"
     },
     {
         title: "UI/UX Design",
         description: "Designing user-friendly interfaces with focus on user experience and modern design principles.",
-        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1768&q=80"
+        image: "/image/ui-ux.jpg"
     },
     {
         title: "Mobile App Development",
         description: "Building cross-platform mobile applications using React Native and Flutter.",
-        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+        image: "/image/mobile.jpg"
     }
 ];
 
@@ -26,7 +26,7 @@ const portfolioData = [
     {
         title: "E-Commerce Website",
         description: "Full-stack e-commerce platform with payment integration and admin dashboard.",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+        image: "/image/project1.jpg",
         technologies: ["React", "Node.js", "MongoDB", "Stripe"],
         category: "react",
         link: "#",
@@ -35,7 +35,7 @@ const portfolioData = [
     {
         title: "Task Management App",
         description: "Productive task management application with real-time updates and team collaboration.",
-        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1768&q=80",
+        image: "/image/project2.jpg",
         technologies: ["Vue.js", "Firebase", "TailwindCSS"],
         category: "vue",
         link: "#",
@@ -44,7 +44,7 @@ const portfolioData = [
     {
         title: "Weather Dashboard",
         description: "Real-time weather application with beautiful UI and detailed forecasts.",
-        image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+        image: "/image/project3.jpg",
         technologies: ["React", "API", "Chart.js", "CSS3"],
         category: "react",
         link: "#",
@@ -53,7 +53,7 @@ const portfolioData = [
     {
         title: "REST API Service",
         description: "Scalable REST API with authentication, documentation, and rate limiting.",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1774&q=80",
+        image: "/image/project4.jpg",
         technologies: ["Node.js", "Express", "MongoDB", "JWT"],
         category: "node",
         link: "#",
@@ -62,7 +62,7 @@ const portfolioData = [
     {
         title: "Social Media Dashboard",
         description: "Analytics dashboard for social media management with real-time data.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+        image: "/image/project5.jpg",
         technologies: ["React", "Chart.js", "API", "Firebase"],
         category: "react",
         link: "#",
@@ -71,7 +71,7 @@ const portfolioData = [
     {
         title: "Payment Gateway Integration",
         description: "Secure payment processing system with multiple payment methods.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
+        image: "/image/project6.jpg",
         technologies: ["Node.js", "API", "Stripe", "PayPal"],
         category: "api",
         link: "#",
@@ -129,7 +129,7 @@ function loadServices() {
         serviceElement.className = 'service-card';
         serviceElement.innerHTML = `
             <div class="service-image">
-                <img src="${service.image}" alt="${service.title}">
+                <img src="${service.image}" alt="${service.title}" onerror="this.src='/image/placeholder.jpg'">
                 <div class="service-image-overlay"></div>
             </div>
             
@@ -161,7 +161,7 @@ function loadPortfolio() {
         
         projectElement.innerHTML = `
             <div class="portfolio-image">
-                <img src="${project.image}" alt="${project.title}">
+                <img src="${project.image}" alt="${project.title}" onerror="this.src='/image/placeholder.jpg'">
                 <div class="portfolio-overlay">
                     ${project.link ? `
                     <a href="${project.link}" class="portfolio-link">
@@ -224,10 +224,59 @@ function filterPortfolio(category) {
     });
 }
 
-// Initialize Particles
+// Initialize Particles for Background
 function initParticles() {
     if (window.tsParticles) {
-        window.tsParticles.load("particles-container", {
+        // Main background particles
+        window.tsParticles.load("particles-background", {
+            background: {
+                color: {
+                    value: "transparent",
+                },
+            },
+            fpsLimit: 60,
+            particles: {
+                color: {
+                    value: "#ff003c",
+                },
+                links: {
+                    color: "#ff003c",
+                    distance: 200,
+                    enable: true,
+                    opacity: 0.2,
+                    width: 1,
+                },
+                move: {
+                    enable: true,
+                    outModes: {
+                        default: "out",
+                    },
+                    random: true,
+                    speed: 0.5,
+                    straight: false,
+                },
+                number: {
+                    density: {
+                        enable: true,
+                        area: 1000,
+                    },
+                    value: 80,
+                },
+                opacity: {
+                    value: 0.2,
+                },
+                shape: {
+                    type: "circle",
+                },
+                size: {
+                    value: { min: 1, max: 5 },
+                },
+            },
+            detectRetina: true,
+        });
+
+        // Hero section particles
+        window.tsParticles.load("hero-particles", {
             background: {
                 color: {
                     value: "transparent",
